@@ -95,7 +95,7 @@ sva_cleaning_sex <- function(edat){
   #expr_ae_ad <- as.matrix(eset_ae_ad_pb[,1:2063])
   #expr_ae_ad <- apply(expr_ae_ad,2,as.numeric)
   
-  n.survar   <- num.sv( t(expr_ae_ad_sv),mod_data, method = "be") 
+  n.survar   <- num.sv( t(expr_ae_ad_sv),mod_data, method = "leek") 
   
   svobj  <- sva(t(expr_ae_ad_sv), mod_data, mod0, n.sv=n.survar)
   if(svobj$n.sv >1 ){
