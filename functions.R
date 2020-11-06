@@ -58,7 +58,7 @@ sva_cleaning_mat <- function(edat){
   
   n.survar   <- num.sv( t(expr_ae_ad),mod_data, method = "leek") 
   
-  svobj  <- sva(t(expr_ae_ad), mod_data, mod0, n.sv=n.survar, method="two-step")
+  svobj  <- sva(t(expr_ae_ad), mod_data, mod0, n.sv=n.survar)
   if(svobj$n.sv >1 ){
     # adjust for sva
     X     <- cbind(mod_data, svobj$sv)
