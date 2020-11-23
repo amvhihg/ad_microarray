@@ -1,6 +1,6 @@
 largest_var_picker <- function(x){
   dataset_expr_c <- subset(clean_data_t, clean_data_t$entidc == x) 
-  dataset_expr_c <- dataset_expr_c[ order(dataset_expr_c$var), ]
+  dataset_expr_c <- dataset_expr_c[ order(dataset_expr_c$var, decreasing =  TRUE), ]
   dataset_expr_c$id <- rownames(dataset_expr_c)
   return(dataset_expr_c[1,ncol(dataset_expr_c)]) 
 } 
